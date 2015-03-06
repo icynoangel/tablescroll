@@ -1,0 +1,125 @@
+
+.scrollTable-component {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+/*.scrollTable .th,
+.scrollTable .td,
+.scrollTable div,
+.scrollTable table {
+    border-collapse: collapse;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}*/
+
+.scrollTable {
+    /*border-collapse: collapse;*/
+    font-weight: normal;
+    text-align: left;
+    vertical-align: middle;
+    width: auto !important;
+}
+
+.scrollTable > tbody {
+    background-color: #F2F2F2;
+}
+
+.scrollTable th,
+.scrollTable td {
+	box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
+    -webkit-box-sizing: border-box !important;
+    font-size: 10px;
+    white-space: nowrap;
+    padding: 0;
+}
+.scrollTable table {
+    /*border-collapse: collapse;*/
+}
+
+
+.div-header,
+.div-footer {
+    overflow: hidden;
+    width: 200px; /* will be overriden by js */
+    border-right: 1px solid #ccc;
+}
+
+.fixed-left {
+    vertical-align: top;
+    width: auto;
+}
+.div-cols {
+    overflow: hidden;
+    height: 500px; /* will be overriden by js config */
+}
+ 
+.div-table {
+    overflow: scroll;
+    width:200px;
+    height:514px; /* will be overriden by js config */
+    position:relative;
+}
+ 
+.div-cols table th,
+.div-cols table td,
+.div-header table th,
+.div-footer table td,
+.top-row th.fixed-th,
+.bottom-row td.fixed-th,
+.div-table td {
+    border: 1px solid #E8E8E8;
+    padding: 3px 5px;
+}
+
+.top-row th,
+.bottom-row td {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.div-cols td {
+    background-color: #f2f2f2;
+}
+
+.scrollTable .bottom-row td {
+    text-align: left;
+}
+.scrollTable .bottom-row .div-fixed td {
+    padding-right: 3px;
+}
+
+.scrollTable tr.error td {
+    background-color: #FFCFCF;
+}
+.scrollTable tr.success td {
+    background-color: #EAFDDD;
+}
+
+.scrollTable .div-table td {
+    background-color: #ffffff;
+}
+
+.scrollTable-sortable .div-fixed th,
+.scrollTable-sortable .div-header th {
+    background-image: url(../images/bg.gif);
+    background-repeat: no-repeat;
+    background-position: center right;
+    /*background-size: 10px;*/
+    cursor: pointer;
+    padding-right: 20px;
+}
+
+.scrollTable-sortable .div-fixed .sort-asc,
+.scrollTable-sortable .div-header .sort-asc {
+    background-image: url(../images/asc.gif);
+}
+.scrollTable-sortable .div-fixed .sort-desc,
+.scrollTable-sortable .div-header .sort-desc {
+    background-image: url(../images/desc.gif);
+}
