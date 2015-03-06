@@ -1,0 +1,365 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>tableScroll demo</title>
+
+    <link href="../dependencies/reset.css" rel="stylesheet" type="text/css" />
+    <link href="../dependencies/tipsy.css" rel="stylesheet" type="text/css" />
+    <link href="../css/tableScroll.css" rel="stylesheet" type="text/css" />
+
+    <style type="text/css">
+        /* demo styles */
+        .container {
+            margin: 50px 30px;
+        }
+    </style>
+
+    <script type="text/javascript" src="../dependencies/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="../dependencies/jquery.tipsy.js"></script>
+    <script type="text/javascript" src="../dependencies/jquery.ba-throttle-debounce.min.js"></script>
+    <script type="text/javascript" src="../js/tableScroll.js"></script>
+</head>
+<body>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+             $('.tbl-scroll').tableScroll({
+                 height          : 200,
+                 standardHeight  : 200,
+                 fixedCols       : 3,             // number of fixed columns (left to right)
+                 classes         : '',            // classes to be added to final table
+                 sortable        : true,         // columns are sortable or not (false by default)
+                 tooltip         : true,          // tooltip for header cells
+                 gravity         : 's'
+             });
+        });
+    </script>
+
+    <div class="container">
+    <div class="scrollTable-component">
+        <table class="tbl-scroll">
+            <thead>
+                <tr>
+                    <th>at nibh sit amet</th>
+                    <th>volutpat elit. Morbi ligula risus,</th>
+                    <th>mollis nec nibh in</th>
+                    <th>accumsan diam. ligula nunc, eu</th>
+                    <th>vulputate nunc ullamcorper venenatis.</th>
+                    <th>Proin leo diam,blandit a,</th>
+                    <th>congue vitae lorem. Aliquam pellentesque</th>
+                    <th>nibh ut imperdiet. </th>
+                    <th>congue vitae lorem. Aliquam pellentesque</th>
+                    <th>nibh ut imperdiet. </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+                    <td>Nam ante velit, auctor quis turpis ac,</td>
+                    <td>dignissim malesuada diam. Vestibulum eget</td>
+                    <td>arcu elementum, fringilla tellus</td>
+                    <td>sit amet, maximus dui.</td>
+                    <td>Integer sed sem id neque sollicitudin laoreet.</td>
+                    <td>Donec quis suscipit ipsum, eget interdum ex.</td>
+                    <td>Donec quam lacus, auctor</td>
+                    <td>Donec quis suscipit ipsum, eget interdum ex.</td>
+                    <td>Donec quam lacus, auctor</td>
+                </tr>
+                <tr>
+                    <td>at nibh sit amet, tristique</td>
+                    <td>volutpat elit. Morbi ligula risus,</td>
+                    <td>mollis nec nibh in, vulputate</td>
+                    <td>accumsan diam. Etiam iaculis ligula nunc, eu</td>
+                    <td>vulputate nunc ullamcorper venenatis.</td>
+                    <td>Proin leo diam, dapibus at blandit a,</td>
+                    <td>congue vitae lorem. Aliquam pellentesque</td>
+                    <td>nibh ut imperdiet hendrerit. </td>
+                    <td>congue vitae lorem. Aliquam pellentesque</td>
+                    <td>nibh ut imperdiet hendrerit. </td>
+                </tr>
+                <tr>
+                    <td>In scelerisque, magna eu gravida rhoncus,</td>
+                    <td>magna ante pulvinar ante, nec venenatis</td>
+                    <td>dolor dolor in sapien. Nullam eget tincidunt tellus,</td>
+                    <td>et varius ligula.</td>
+                    <td>Phasellus aliquam sit amet ex nec ultrices.</td>
+                    <td>Integer sed sem id neque sollicitudin laoreet.</td>
+                    <td>Donec quis suscipit ipsum, eget interdum ex.</td>
+                    <td>Donec quam lacus, auctor</td>
+                    <td>Donec quis suscipit ipsum, eget interdum ex.</td>
+                    <td>Donec quam lacus, auctor</td>
+                </tr>
+                <tr>
+                    <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+                    <td>Nam ante velit, auctor quis turpis ac,</td>
+                    <td>dignissim malesuada diam. Vestibulum eget</td>
+                    <td>arcu elementum, fringilla tellus</td>
+                    <td>sit amet, maximus dui.</td>
+                    <td>Integer sed sem id neque sollicitudin laoreet.</td>
+                    <td>Donec quis suscipit ipsum, eget interdum ex.</td>
+                    <td>Donec quam lacus, auctor</td>
+                    <td>Donec quis suscipit ipsum, eget interdum ex.</td>
+                    <td>Donec quam lacus, auctor</td>
+                </tr>
+                <tr>
+                    <td>at nibh sit amet, tristique</td>
+                    <td>volutpat elit. Morbi ligula risus,</td>
+                    <td>mollis nec nibh in, vulputate</td>
+                    <td>accumsan diam. Etiam iaculis ligula nunc, eu</td>
+                    <td>vulputate nunc ullamcorper venenatis.</td>
+                    <td>Proin leo diam, dapibus at blandit a,</td>
+                    <td>congue vitae lorem. Aliquam pellentesque</td>
+                    <td>nibh ut imperdiet hendrerit. </td>
+                    <td>congue vitae lorem. Aliquam pellentesque</td>
+                    <td>nibh ut imperdiet hendrerit. </td>
+                </tr>
+                <tr>
+                    <td>In scelerisque, magna eu gravida rhoncus,</td>
+                    <td>magna ante pulvinar ante, nec venenatis</td>
+                    <td>dolor dolor in sapien. Nullam eget tincidunt tellus,</td>
+                    <td>et varius ligula.</td>
+                    <td>Phasellus aliquam sit amet ex nec ultrices.</td>
+                    <td>Integer sed sem id neque sollicitudin laoreet.</td>
+                    <td>Donec quis suscipit ipsum, eget interdum ex.</td>
+                    <td>Donec quam lacus, auctor</td>
+                    <td>Donec quis suscipit ipsum, eget interdum ex.</td>
+                    <td>Donec quam lacus, auctor</td>
+                </tr>
+                <tr>
+                    <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+                    <td>Nam ante velit, auctor quis turpis ac,</td>
+                    <td>dignissim malesuada diam. Vestibulum eget</td>
+                    <td>arcu elementum, fringilla tellus</td>
+                    <td>sit amet, maximus dui.</td>
+                    <td>Integer sed sem id neque sollicitudin laoreet.</td>
+                    <td>Donec quis suscipit ipsum, eget interdum ex.</td>
+                    <td>Donec quam lacus, auctor</td>
+                    <td>Donec quis suscipit ipsum, eget interdum ex.</td>
+                    <td>Donec quam lacus, auctor</td>
+                </tr>
+                <tr>
+                    <td>at nibh sit amet, tristique</td>
+                    <td>volutpat elit. Morbi ligula risus,</td>
+                    <td>mollis nec nibh in, vulputate</td>
+                    <td>accumsan diam. Etiam iaculis ligula nunc, eu</td>
+                    <td>vulputate nunc ullamcorper venenatis.</td>
+                    <td>Proin leo diam, dapibus at blandit a,</td>
+                    <td>congue vitae lorem. Aliquam pellentesque</td>
+                    <td>nibh ut imperdiet hendrerit. </td>
+                    <td>congue vitae lorem. Aliquam pellentesque</td>
+                    <td>nibh ut imperdiet hendrerit. </td>
+                </tr>
+                <tr>
+                    <td>In scelerisque, magna eu gravida rhoncus,</td>
+                    <td>magna ante pulvinar ante, nec venenatis</td>
+                    <td>dolor dolor in sapien. Nullam eget tincidunt tellus,</td>
+                    <td>et varius ligula.</td>
+                    <td>Phasellus aliquam sit amet ex nec ultrices.</td>
+                    <td>Integer sed sem id neque sollicitudin laoreet.</td>
+                    <td>Donec quis suscipit ipsum, eget interdum ex.</td>
+                    <td>Donec quam lacus, auctor</td>
+                    <td>Donec quis suscipit ipsum, eget interdum ex.</td>
+                    <td>Donec quam lacus, auctor</td>
+                </tr>
+                <tr>
+                    <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+                    <td>Nam ante velit, auctor quis turpis ac,</td>
+                    <td>dignissim malesuada diam. Vestibulum eget</td>
+                    <td>arcu elementum, fringilla tellus</td>
+                    <td>sit amet, maximus dui.</td>
+                    <td>Integer sed sem id neque sollicitudin laoreet.</td>
+                    <td>Donec quis suscipit ipsum, eget interdum ex.</td>
+                    <td>Donec quam lacus, auctor</td>
+                    <td>Donec quis suscipit ipsum, eget interdum ex.</td>
+                    <td>Donec quam lacus, auctor</td>
+                </tr>
+                <tr>
+                    <td>at nibh sit amet, tristique</td>
+                    <td>volutpat elit. Morbi ligula risus,</td>
+                    <td>mollis nec nibh in, vulputate</td>
+                    <td>accumsan diam. Etiam iaculis ligula nunc, eu</td>
+                    <td>vulputate nunc ullamcorper venenatis.</td>
+                    <td>Proin leo diam, dapibus at blandit a,</td>
+                    <td>congue vitae lorem. Aliquam pellentesque</td>
+                    <td>nibh ut imperdiet hendrerit. </td>
+                    <td>congue vitae lorem. Aliquam pellentesque</td>
+                    <td>nibh ut imperdiet hendrerit. </td>
+                </tr>
+                <tr>
+                    <td>In scelerisque, magna eu gravida rhoncus,</td>
+                    <td>magna ante pulvinar ante, nec venenatis</td>
+                    <td>dolor dolor in sapien. Nullam eget tincidunt tellus,</td>
+                    <td>et varius ligula.</td>
+                    <td>Phasellus aliquam sit amet ex nec ultrices.</td>
+                    <td>Integer sed sem id neque sollicitudin laoreet.</td>
+                    <td>Donec quis suscipit ipsum, eget interdum ex.</td>
+                    <td>Donec quam lacus, auctor</td>
+                    <td>Donec quis suscipit ipsum, eget interdum ex.</td>
+                    <td>Donec quam lacus, auctor</td>
+                </tr>
+                <tr>
+                    <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+                    <td>Nam ante velit, auctor quis turpis ac,</td>
+                    <td>dignissim malesuada diam. Vestibulum eget</td>
+                    <td>arcu elementum, fringilla tellus</td>
+                    <td>sit amet, maximus dui.</td>
+                    <td>Integer sed sem id neque sollicitudin laoreet.</td>
+                    <td>Donec quis suscipit ipsum, eget interdum ex.</td>
+                    <td>Donec quam lacus, auctor</td>
+                    <td>Donec quis suscipit ipsum, eget interdum ex.</td>
+                    <td>Donec quam lacus, auctor</td>
+                </tr>
+                <tr>
+                    <td>at nibh sit amet, tristique</td>
+                    <td>volutpat elit. Morbi ligula risus,</td>
+                    <td>mollis nec nibh in, vulputate</td>
+                    <td>accumsan diam. Etiam iaculis ligula nunc, eu</td>
+                    <td>vulputate nunc ullamcorper venenatis.</td>
+                    <td>Proin leo diam, dapibus at blandit a,</td>
+                    <td>congue vitae lorem. Aliquam pellentesque</td>
+                    <td>nibh ut imperdiet hendrerit. </td>
+                    <td>congue vitae lorem. Aliquam pellentesque</td>
+                    <td>nibh ut imperdiet hendrerit. </td>
+                </tr>
+                <tr>
+                    <td>In scelerisque, magna eu gravida rhoncus,</td>
+                    <td>magna ante pulvinar ante, nec venenatis</td>
+                    <td>dolor dolor in sapien. Nullam eget tincidunt tellus,</td>
+                    <td>et varius ligula.</td>
+                    <td>Phasellus aliquam sit amet ex nec ultrices.</td>
+                    <td>Integer sed sem id neque sollicitudin laoreet.</td>
+                    <td>Donec quis suscipit ipsum, eget interdum ex.</td>
+                    <td>Donec quam lacus, auctor</td>
+                    <td>Donec quis suscipit ipsum, eget interdum ex.</td>
+                    <td>Donec quam lacus, auctor</td>
+                </tr>
+                <tr>
+                    <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+                    <td>Nam ante velit, auctor quis turpis ac,</td>
+                    <td>dignissim malesuada diam. Vestibulum eget</td>
+                    <td>arcu elementum, fringilla tellus</td>
+                    <td>sit amet, maximus dui.</td>
+                    <td>Integer sed sem id neque sollicitudin laoreet.</td>
+                    <td>Donec quis suscipit ipsum, eget interdum ex.</td>
+                    <td>Donec quam lacus, auctor</td>
+                    <td>Donec quis suscipit ipsum, eget interdum ex.</td>
+                    <td>Donec quam lacus, auctor</td>
+                </tr>
+                <tr>
+                    <td>at nibh sit amet, tristique</td>
+                    <td>volutpat elit. Morbi ligula risus,</td>
+                    <td>mollis nec nibh in, vulputate</td>
+                    <td>accumsan diam. Etiam iaculis ligula nunc, eu</td>
+                    <td>vulputate nunc ullamcorper venenatis.</td>
+                    <td>Proin leo diam, dapibus at blandit a,</td>
+                    <td>congue vitae lorem. Aliquam pellentesque</td>
+                    <td>nibh ut imperdiet hendrerit. </td>
+                    <td>congue vitae lorem. Aliquam pellentesque</td>
+                    <td>nibh ut imperdiet hendrerit. </td>
+                </tr>
+                <tr>
+                    <td>In scelerisque, magna eu gravida rhoncus,</td>
+                    <td>magna ante pulvinar ante, nec venenatis</td>
+                    <td>dolor dolor in sapien. Nullam eget tincidunt tellus,</td>
+                    <td>et varius ligula.</td>
+                    <td>Phasellus aliquam sit amet ex nec ultrices.</td>
+                    <td>Integer sed sem id neque sollicitudin laoreet.</td>
+                    <td>Donec quis suscipit ipsum, eget interdum ex.</td>
+                    <td>Donec quam lacus, auctor</td>
+                    <td>Donec quis suscipit ipsum, eget interdum ex.</td>
+                    <td>Donec quam lacus, auctor</td>
+                </tr>
+                <tr>
+                    <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+                    <td>Nam ante velit, auctor quis turpis ac,</td>
+                    <td>dignissim malesuada diam. Vestibulum eget</td>
+                    <td>arcu elementum, fringilla tellus</td>
+                    <td>sit amet, maximus dui.</td>
+                    <td>Integer sed sem id neque sollicitudin laoreet.</td>
+                    <td>Donec quis suscipit ipsum, eget interdum ex.</td>
+                    <td>Donec quam lacus, auctor</td>
+                    <td>Donec quis suscipit ipsum, eget interdum ex.</td>
+                    <td>Donec quam lacus, auctor</td>
+                </tr>
+                <tr>
+                    <td>at nibh sit amet, tristique</td>
+                    <td>volutpat elit. Morbi ligula risus,</td>
+                    <td>mollis nec nibh in, vulputate</td>
+                    <td>accumsan diam. Etiam iaculis ligula nunc, eu</td>
+                    <td>vulputate nunc ullamcorper venenatis.</td>
+                    <td>Proin leo diam, dapibus at blandit a,</td>
+                    <td>congue vitae lorem. Aliquam pellentesque</td>
+                    <td>nibh ut imperdiet hendrerit. </td>
+                    <td>congue vitae lorem. Aliquam pellentesque</td>
+                    <td>nibh ut imperdiet hendrerit. </td>
+                </tr>
+                <tr>
+                    <td>In scelerisque, magna eu gravida rhoncus,</td>
+                    <td>magna ante pulvinar ante, nec venenatis</td>
+                    <td>dolor dolor in sapien. Nullam eget tincidunt tellus,</td>
+                    <td>et varius ligula.</td>
+                    <td>Phasellus aliquam sit amet ex nec ultrices.</td>
+                    <td>Integer sed sem id neque sollicitudin laoreet.</td>
+                    <td>Donec quis suscipit ipsum, eget interdum ex.</td>
+                    <td>Donec quam lacus, auctor</td>
+                    <td>Donec quis suscipit ipsum, eget interdum ex.</td>
+                    <td>Donec quam lacus, auctor</td>
+                </tr>
+                <tr>
+                    <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+                    <td>Nam ante velit, auctor quis turpis ac,</td>
+                    <td>dignissim malesuada diam. Vestibulum eget</td>
+                    <td>arcu elementum, fringilla tellus</td>
+                    <td>sit amet, maximus dui.</td>
+                    <td>Integer sed sem id neque sollicitudin laoreet.</td>
+                    <td>Donec quis suscipit ipsum, eget interdum ex.</td>
+                    <td>Donec quam lacus, auctor</td>
+                    <td>Donec quis suscipit ipsum, eget interdum ex.</td>
+                    <td>Donec quam lacus, auctor</td>
+                </tr>
+                <tr>
+                    <td>at nibh sit amet, tristique</td>
+                    <td>volutpat elit. Morbi ligula risus,</td>
+                    <td>mollis nec nibh in, vulputate</td>
+                    <td>accumsan diam. Etiam iaculis ligula nunc, eu</td>
+                    <td>vulputate nunc ullamcorper venenatis.</td>
+                    <td>Proin leo diam, dapibus at blandit a,</td>
+                    <td>congue vitae lorem. Aliquam pellentesque</td>
+                    <td>nibh ut imperdiet hendrerit. </td>
+                    <td>congue vitae lorem. Aliquam pellentesque</td>
+                    <td>nibh ut imperdiet hendrerit. </td>
+                </tr>
+                <tr>
+                    <td>In scelerisque, magna eu gravida rhoncus,</td>
+                    <td>magna ante pulvinar ante, nec venenatis</td>
+                    <td>dolor dolor in sapien. Nullam eget tincidunt tellus,</td>
+                    <td>et varius ligula.</td>
+                    <td>Phasellus aliquam sit amet ex nec ultrices.</td>
+                    <td>Integer sed sem id neque sollicitudin laoreet.</td>
+                    <td>Donec quis suscipit ipsum, eget interdum ex.</td>
+                    <td>Donec quam lacus, auctor</td>
+                    <td>Donec quis suscipit ipsum, eget interdum ex.</td>
+                    <td>Donec quam lacus, auctor</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Proin leo diam,blandit a,</td>
+                    <td>congue vitae lorem. Aliquam pellentesque</td>
+                    <td>nibh ut imperdiet. </td>
+                    <td>congue vitae lorem. Aliquam pellentesque</td>
+                    <td>nibh ut imperdiet. </td>
+                    <td>at nibh sit amet</td>
+                    <td>volutpat elit. Morbi ligula risus,</td>
+                    <td>mollis nec nibh in</td>
+                    <td>accumsan diam. ligula nunc, eu</td>
+                    <td>vulputate nunc ullamcorper venenatis.</td>
+                </tr>
+            </tfoot>
+        </table>
+     </div>
+</div>
+
+</body>
+</html>
